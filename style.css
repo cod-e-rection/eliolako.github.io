@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 * \{ margin: 0; padding: 0; box-sizing: border-box; \}\
+html \{ scroll-behavior: smooth; \}\
+body \{\
+  font-family: system-ui, sans-serif;\
+  line-height: 1.6;\
+  color: #222;\
+  background: #fff;\
+  transition: background 0.3s, color 0.3s;\
+\}\
+a \{ color: inherit; text-decoration: none; \}\
+ul \{ list-style: none; \}\
+.container \{ width: 90%; max-width: 1100px; margin: 0 auto; \}\
+\
+.navbar \{\
+  background: #fff;\
+  border-bottom: 1px solid #eee;\
+  position: sticky; top: 0; z-index: 1000;\
+\}\
+.nav-content \{\
+  display: flex; align-items: center; justify-content: space-between;\
+  padding: 1rem 0;\
+\}\
+.brand \{ font-size: 1.3rem; font-weight: 700; \}\
+.nav-links \{ display: flex; gap: 1rem; \}\
+.nav-links a \{ padding: 0.5rem; border-radius: 6px; transition: background 0.2s; \}\
+.nav-links a:hover \{ background: #f2f2f2; \}\
+.menu-toggle \{ display: none; background: none; border: none; font-size: 1.5rem; \}\
+.dark-toggle \{ margin-left: 1rem; background: none; border: none; font-size: 1.2rem; cursor: pointer; \}\
+\
+.hero \{ padding: 5rem 0; display: flex; align-items: center; \}\
+.hero-content \{ display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; \}\
+.hero h1 \{ font-size: 2.5rem; margin: 1rem 0; \}\
+.role \{ font-weight: 600; margin-bottom: 1rem; \}\
+.summary \{ margin-bottom: 1.5rem; \}\
+.hero-buttons \{ display: flex; gap: 1rem; margin-bottom: 1.5rem; \}\
+\
+.btn \{ background: #2563eb; color: #fff; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; \}\
+.btn:hover \{ background: #1d4ed8; \}\
+.btn.secondary \{ background: #eee; color: #222; \}\
+.btn.secondary:hover \{ background: #ddd; \}\
+.btn.small \{ padding: 0.3rem 0.6rem; font-size: 0.8rem; \}\
+\
+.section \{ padding: 4rem 0; \}\
+.section h2 \{ margin-bottom: 2rem; font-size: 2rem; \}\
+.grid \{ display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); \}\
+.card \{ background: #fafafa; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); \}\
+.card h3 \{ margin-bottom: 0.5rem; font-size: 1.2rem; \}\
+.card span \{ font-size: 0.85rem; color: #666; display: block; margin-bottom: 0.8rem; \}\
+.card ul \{ margin-left: 1rem; list-style: disc; \}\
+\
+.footer \{ background: #111; color: #fff; padding: 2rem 0; text-align: center; \}\
+.footer .socials \{ margin-top: 0.5rem; display: flex; gap: 1rem; justify-content: center; \}\
+\
+body.dark \{ background: #111; color: #eee; \}\
+body.dark .navbar \{ background: #1a1a1a; border-color: #333; \}\
+body.dark .card \{ background: #1f1f1f; color: #ddd; \}\
+body.dark .btn.secondary \{ background: #333; color: #eee; \}\
+body.dark .btn.secondary:hover \{ background: #444; \}\
+\
+@media (max-width: 768px) \{\
+  .nav-links \{ display: none; flex-direction: column; background: #fff; padding: 1rem; position: absolute; top: 60px; right: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-radius: 8px; \}\
+  .nav-links.show \{ display: flex; \}\
+  .menu-toggle \{ display: block; cursor: pointer; \}\
+\}\
+}

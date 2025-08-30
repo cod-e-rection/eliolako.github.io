@@ -8,105 +8,121 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <header class="nav-wrap">
+  <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#home">Elio Lako</a>
-      <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
-      <ul id="navLinks" class="nav-links">
+      <a class="logo" href="#home">Elio Lako</a>
+      <ul class="nav-list" id="navList">
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu">☰</button>
     </nav>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
+      <div class="container hero-grid">
         <div class="hero-left">
-          <p class="location">📍 Tirana, Albania</p>
-          <h1 class="name">Elio Lako</h1>
-          <h2 class="role"> <span id="typed"></span><span class="cursor">|</span></h2>
-          <p class="lead">I build fast, elegant, human-centered web & mobile apps. Clean architecture, great UX, and shipping fast.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#projects">See projects</a>
-            <a class="btn ghost" href="mailto:elio@example.com">Get in touch</a>
+          <p class="eyebrow">Hi, I'm</p>
+          <h1 class="hero-name">Elio <span class="last">Lako</span></h1>
+          <h2 class="typing"><span id="typed"></span><span class="blink">|</span></h2>
+          <p class="hero-desc">I build fast, elegant, human-centered web & mobile apps — clean architecture, pragmatic design, and shipping features that matter.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn primary">Contact</a>
+            <a href="#projects" class="btn outline">Projects</a>
+            <a href="resume.pdf" class="btn ghost" target="_blank">Resume</a>
           </div>
-          <div class="socials">
+          <div class="hero-links">
             <a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Website">Website</a>
           </div>
         </div>
+
         <div class="hero-right">
-          <div class="photo-anim">
-            <img src="profile.svg" alt="Elio Lako profile" class="profile">
-            <div class="glow"></div>
+          <div class="photo-wrap">
+            <img src="profile.svg" alt="Profile" class="photo">
+            <div class="photo-ring"></div>
           </div>
         </div>
       </div>
-      <a class="scroll-down" href="#projects" aria-hidden="true">▼</a>
+      <a class="down-arrow" href="#about" aria-hidden="true">⌄</a>
     </section>
 
-    <section id="projects" class="section">
+    <section id="about" class="section about">
+      <div class="container">
+        <h3 class="section-title">About</h3>
+        <p class="lead">Software engineer with experience building production web and mobile apps. I focus on performance, developer experience, and sustainable architecture.</p>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <h4>Background</h4>
+            <p>Experience across startups and enterprises building products from idea to production.</p>
+          </div>
+          <div class="about-card reveal">
+            <h4>Approach</h4>
+            <p>Emphasize testability, clear boundaries, and shipping increments that reduce risk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h3 class="section-title">Skills</h3>
+        <ul class="skill-list reveal">
+          <li>TypeScript</li>
+          <li>React / Next.js</li>
+          <li>Node.js</li>
+          <li>Java / Spring</li>
+          <li>Kotlin / Android</li>
+          <li>Tailwind / CSS</li>
+          <li>Postgres</li>
+          <li>Docker / CI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
       <div class="container">
         <h3 class="section-title">Projects</h3>
-        <div class="cards">
-          <article class="card reveal">
+        <div class="proj-grid">
+          <article class="proj-card reveal">
             <h4>Pulse Analytics</h4>
-            <p class="muted">Real-time KPIs and dashboards</p>
-            <p>Event ingestion, alerts and shareable insights.</p>
-            <p class="tags">Next.js · Postgres · Tailwind</p>
-            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+            <p>Real‑time KPIs, dashboards and alerting.</p>
+            <p class="proj-tags">Next.js · Postgres · Tailwind</p>
+            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
           </article>
-          <article class="card reveal">
+          <article class="proj-card reveal">
             <h4>Shoplite</h4>
-            <p class="muted">Headless e‑commerce starter</p>
-            <p>Fast storefront with a delightful checkout.</p>
-            <p class="tags">Remix · Prisma · Stripe</p>
-            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+            <p>Headless ecommerce starter with Stripe integration.</p>
+            <p class="proj-tags">Remix · Prisma · Stripe</p>
+            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
           </article>
-          <article class="card reveal">
+          <article class="proj-card reveal">
             <h4>TaskForge</h4>
-            <p class="muted">Team tasks with AI assist</p>
-            <p>Natural‑language task creation and planning tools.</p>
-            <p class="tags">React · Supabase · OpenAI</p>
-            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+            <p>Team tasks with AI assist and smart planning.</p>
+            <p class="proj-tags">React · Supabase · OpenAI</p>
+            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section alt">
-      <div class="container">
-        <h3 class="section-title">Experience</h3>
-        <div class="timeline">
-          <div class="item reveal">
-            <h4>Senior Tech Lead · ATIS <span class="when">2022 — Present</span></h4>
-            <p>Leading cross-functional teams, owning architecture and delivery.</p>
-          </div>
-          <div class="item reveal">
-            <h4>Full‑Stack Engineer · Freelance <span class="when">2018 — 2022</span></h4>
-            <p>Built SaaS dashboards, billing, and analytics pipelines.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
+    <section id="contact" class="section contact">
       <div class="container">
         <h3 class="section-title">Contact</h3>
         <div class="contact-grid">
-          <div class="card reveal">
-            <h4>Say hello</h4>
+          <div class="contact-card reveal">
+            <h4>Say hi</h4>
             <p>Email: <a href="mailto:elio@example.com">elio@example.com</a></p>
             <p>Phone: <a href="tel:+3556000000">+355 6X XXX XXXX</a></p>
           </div>
-          <form class="card contact-form reveal" onsubmit="event.preventDefault(); alert('Demo form — replace with your backend');">
+          <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('This is a placeholder form — replace with your backend');">
             <label><input name="name" placeholder="Your name" required></label>
             <label><input name="email" type="email" placeholder="Your email" required></label>
-            <label><textarea name="message" placeholder="Message" rows="5" required></textarea></label>
-            <button class="btn">Send</button>
+            <label><textarea name="message" placeholder="Message..." rows="5" required></textarea></label>
+            <button class="btn primary">Send</button>
           </form>
         </div>
       </div>
@@ -115,7 +131,7 @@
 
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> Elio Lako — Built with ❤️</small>
+      <small>© 2025 Elio Lako</small>
     </div>
   </footer>
 

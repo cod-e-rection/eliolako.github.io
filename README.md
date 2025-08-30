@@ -1,17 +1,17 @@
-# Elio Lako — Portfolio
+# Elio Lako — Animated Portfolio (ready)
 
-This is a personal portfolio website hosted on GitHub Pages.
+Drop this folder into a repository named `eliolako.github.io` (or any repo for project pages).
+Files:
+- index.html
+- style.css
+- script.js
+- profile.svg (placeholder image)
+- favicon.svg
+- README.md
 
 ## Run locally
-
-```bash
 python3 -m http.server 8000
-```
+Open http://localhost:8000
 
-Then open `http://localhost:8000`.
-
-## Deploy on GitHub Pages
-
-1. Push files to the `main` branch of your repository named `eliolako.github.io`
-2. Go to repository Settings → Pages → select `main` as source.
-3. Your site will be live at `https://eliolako.github.io`.
+## Deploy
+Push the files to GitHub `main` branch, enable Pages if needed. For user site, repo must be username.github.io

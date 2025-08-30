@@ -1,88 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Elio Lako — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-content">
-      <h1 class="brand">Elio Lako</h1>
-      <button class="menu-toggle" id="menuToggle">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#home">Elio Lako</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button class="dark-toggle" id="darkToggle">🌙</button></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <section class="hero" id="about">
-    <div class="container hero-content">
-      <div>
-        <h1>Hello, I'm <span>Elio Lako</span></h1>
-        <p class="role">Software Engineer | Portfolio</p>
-        <p class="summary">
-          Passionate about building modern web and mobile applications with focus on clean code, usability, and performance.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <p class="location">📍 Tirana, Albania</p>
+          <h1 class="name">Elio Lako</h1>
+          <h2 class="role"> <span id="typed"></span><span class="cursor">|</span></h2>
+          <p class="lead">I build fast, elegant, human-centered web & mobile apps. Clean architecture, great UX, and shipping fast.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">See projects</a>
+            <a class="btn ghost" href="mailto:elio@example.com">Get in touch</a>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Website">Website</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="photo-anim">
+            <img src="profile.svg" alt="Elio Lako profile" class="profile">
+            <div class="glow"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <a class="scroll-down" href="#projects" aria-hidden="true">▼</a>
+    </section>
 
-  <section class="section" id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Weather Forecast App</h3>
-          <p>A mobile app built with Java and MVVM to fetch weekly weather using OpenWeatherMap API.</p>
-        </div>
-        <div class="card">
-          <h3>Portfolio Website</h3>
-          <p>This very portfolio, built with HTML, CSS, and JS for GitHub Pages hosting.</p>
+    <section id="projects" class="section">
+      <div class="container">
+        <h3 class="section-title">Projects</h3>
+        <div class="cards">
+          <article class="card reveal">
+            <h4>Pulse Analytics</h4>
+            <p class="muted">Real-time KPIs and dashboards</p>
+            <p>Event ingestion, alerts and shareable insights.</p>
+            <p class="tags">Next.js · Postgres · Tailwind</p>
+            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+          </article>
+          <article class="card reveal">
+            <h4>Shoplite</h4>
+            <p class="muted">Headless e‑commerce starter</p>
+            <p>Fast storefront with a delightful checkout.</p>
+            <p class="tags">Remix · Prisma · Stripe</p>
+            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+          </article>
+          <article class="card reveal">
+            <h4>TaskForge</h4>
+            <p class="muted">Team tasks with AI assist</p>
+            <p>Natural‑language task creation and planning tools.</p>
+            <p class="tags">React · Supabase · OpenAI</p>
+            <div class="card-actions"><a class="link" href="#">Live</a> <a class="link" href="#">Source</a></div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="experience">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Software Engineer</h3>
-          <span>2020 – Present</span>
-          <p>Developing scalable applications and cloud-based solutions with focus on performance and maintainability.</p>
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h3 class="section-title">Experience</h3>
+        <div class="timeline">
+          <div class="item reveal">
+            <h4>Senior Tech Lead · ATIS <span class="when">2022 — Present</span></h4>
+            <p>Leading cross-functional teams, owning architecture and delivery.</p>
+          </div>
+          <div class="item reveal">
+            <h4>Full‑Stack Engineer · Freelance <span class="when">2018 — 2022</span></h4>
+            <p>Built SaaS dashboards, billing, and analytics pipelines.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:elio@example.com">elio@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/eliolako" target="_blank">linkedin.com/in/eliolako</a></p>
-      <p>GitHub: <a href="https://github.com/eliolako" target="_blank">github.com/eliolako</a></p>
-    </div>
-  </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <h3 class="section-title">Contact</h3>
+        <div class="contact-grid">
+          <div class="card reveal">
+            <h4>Say hello</h4>
+            <p>Email: <a href="mailto:elio@example.com">elio@example.com</a></p>
+            <p>Phone: <a href="tel:+3556000000">+355 6X XXX XXXX</a></p>
+          </div>
+          <form class="card contact-form reveal" onsubmit="event.preventDefault(); alert('Demo form — replace with your backend');">
+            <label><input name="name" placeholder="Your name" required></label>
+            <label><input name="email" type="email" placeholder="Your email" required></label>
+            <label><textarea name="message" placeholder="Message" rows="5" required></textarea></label>
+            <button class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Elio Lako</p>
-      <div class="socials">
-        <a href="https://linkedin.com/in/eliolako" target="_blank">LinkedIn</a>
-        <a href="https://github.com/eliolako" target="_blank">GitHub</a>
-      </div>
+      <small>© <span id="year"></span> Elio Lako — Built with ❤️</small>
     </div>
   </footer>
 

@@ -1,138 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Elio Lako — Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Elio Lako - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="logo" href="#home">Elio Lako</a>
-      <ul class="nav-list" id="navList">
+  <header>
+    <div class="logo">EL</div>
+    <nav>
+      <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="navToggle" class="nav-toggle" aria-label="Open menu">☰</button>
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="eyebrow">Hi, I'm</p>
-          <h1 class="hero-name">Elio <span class="last">Lako</span></h1>
-          <h2 class="typing"><span id="typed"></span><span class="blink">|</span></h2>
-          <p class="hero-desc">I build fast, elegant, human-centered web & mobile apps — clean architecture, pragmatic design, and shipping features that matter.</p>
-          <div class="hero-ctas">
-            <a href="#contact" class="btn primary">Contact</a>
-            <a href="#projects" class="btn outline">Projects</a>
-            <a href="resume.pdf" class="btn ghost" target="_blank">Resume</a>
-          </div>
-          <div class="hero-links">
-            <a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="LinkedIn">LinkedIn</a> · <a href="#" aria-label="Website">Website</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="photo-wrap">
-            <img src="profile.svg" alt="Profile" class="photo">
-            <div class="photo-ring"></div>
-          </div>
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="highlight">Elio Lako</span></h1>
+        <h2><span id="typing"></span></h2>
+        <p class="lead">[Replace this with a short tagline about yourself]</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn ghost" href="#projects">Projects</a>
         </div>
       </div>
-      <a class="down-arrow" href="#about" aria-hidden="true">⌄</a>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="container">
-        <h3 class="section-title">About</h3>
-        <p class="lead">Software engineer with experience building production web and mobile apps. I focus on performance, developer experience, and sustainable architecture.</p>
-        <div class="about-grid">
-          <div class="about-card reveal">
-            <h4>Background</h4>
-            <p>Experience across startups and enterprises building products from idea to production.</p>
-          </div>
-          <div class="about-card reveal">
-            <h4>Approach</h4>
-            <p>Emphasize testability, clear boundaries, and shipping increments that reduce risk.</p>
-          </div>
-        </div>
+      <div class="hero-right">
+        <img src="profile.svg" alt="Profile placeholder" class="profile-img">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h3 class="section-title">Skills</h3>
-        <ul class="skill-list reveal">
-          <li>TypeScript</li>
-          <li>React / Next.js</li>
-          <li>Node.js</li>
-          <li>Java / Spring</li>
-          <li>Kotlin / Android</li>
-          <li>Tailwind / CSS</li>
-          <li>Postgres</li>
-          <li>Docker / CI</li>
-        </ul>
-      </div>
-    </section>
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>[Placeholder bio — replace with your text]</p>
+  </section>
 
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h3 class="section-title">Projects</h3>
-        <div class="proj-grid">
-          <article class="proj-card reveal">
-            <h4>Pulse Analytics</h4>
-            <p>Real‑time KPIs, dashboards and alerting.</p>
-            <p class="proj-tags">Next.js · Postgres · Tailwind</p>
-            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
-          </article>
-          <article class="proj-card reveal">
-            <h4>Shoplite</h4>
-            <p>Headless ecommerce starter with Stripe integration.</p>
-            <p class="proj-tags">Remix · Prisma · Stripe</p>
-            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
-          </article>
-          <article class="proj-card reveal">
-            <h4>TaskForge</h4>
-            <p>Team tasks with AI assist and smart planning.</p>
-            <p class="proj-tags">React · Supabase · OpenAI</p>
-            <div class="proj-links"><a href="#">Live</a> · <a href="#">Source</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>TypeScript</li><li>React</li><li>Node.js</li><li>Java</li>
+    </ul>
+  </section>
 
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h3 class="section-title">Contact</h3>
-        <div class="contact-grid">
-          <div class="contact-card reveal">
-            <h4>Say hi</h4>
-            <p>Email: <a href="mailto:elio@example.com">elio@example.com</a></p>
-            <p>Phone: <a href="tel:+3556000000">+355 6X XXX XXXX</a></p>
-          </div>
-          <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('This is a placeholder form — replace with your backend');">
-            <label><input name="name" placeholder="Your name" required></label>
-            <label><input name="email" type="email" placeholder="Your email" required></label>
-            <label><textarea name="message" placeholder="Message..." rows="5" required></textarea></label>
-            <button class="btn primary">Send</button>
-          </form>
-        </div>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <article class="proj-card">
+        <img src="project1.svg" alt="Project 1" class="proj-thumb">
+        <h3>Project One</h3>
+        <p>Short description. Replace with real project details.</p>
+      </article>
+      <article class="proj-card">
+        <img src="project2.svg" alt="Project 2" class="proj-thumb">
+        <h3>Project Two</h3>
+        <p>Short description. Replace with real project details.</p>
+      </article>
+      <article class="proj-card">
+        <img src="project3.svg" alt="Project 3" class="proj-thumb">
+        <h3>Project Three</h3>
+        <p>Short description. Replace with real project details.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <p>Email: <a href="mailto:elio@example.com">elio@example.com</a></p>
+        <p>Phone: <a href="tel:+3556000000">+355 6X XXX XXXX</a></p>
       </div>
-    </section>
-  </main>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Placeholder form — replace with backend')">
+        <input placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button class="btn">Send</button>
+      </form>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container">
-      <small>© 2025 Elio Lako</small>
-    </div>
+    <p>© 2025 Elio Lako</p>
   </footer>
 
   <script src="script.js"></script>

@@ -1,18 +1,18 @@
-# Elio Lako — Reference-style Portfolio (clone-like)
-
-Files:
+Elio Lako — Portfolio (clone-style)
+Files included:
 - index.html
 - style.css
 - script.js
-- profile.svg (placeholder image)
+- profile.svg (placeholder)
+- project1.svg, project2.svg, project3.svg (thumbnails)
 - favicon.svg
 - README.md
 
-Replace the name, email, links, and resume file with your own details. This is a placeholder contact form; plug in Formspree/EmailJS for a working form.
+Replace placeholders (profile.svg, project thumbnails) and edit index.html to change text, email, links.
+
 
 Run locally:
 python3 -m http.server 8000
-Open: http://localhost:8000
+Open http://localhost:8000
 
-Deploy:
-Push to a repo named `eliolako.github.io` (or any repo for project pages) and enable Pages if required.
+Deploy: push to a repo (for root user site name repo username.github.io)
